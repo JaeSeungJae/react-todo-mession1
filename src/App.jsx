@@ -33,11 +33,20 @@ function App() {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
+  const onToggle = (id) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
+  };
+
   return (
     <TodoList
       todos={todos}
       handleSubmit={handleSubmit}
       removeTodo={removeTodo}
+      onToggle={onToggle}
     />
   );
 }

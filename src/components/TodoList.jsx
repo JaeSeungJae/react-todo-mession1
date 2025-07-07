@@ -1,6 +1,6 @@
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ todos, handleSubmit, removeTodo }) => {
+const TodoList = ({ todos, handleSubmit, removeTodo, onToggle }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -17,6 +17,7 @@ const TodoList = ({ todos, handleSubmit, removeTodo }) => {
             value={todo.value}
             completed={todo.completed}
             removeTodo={removeTodo}
+            onToggle={onToggle}
           />
         ))}
       </ul>
