@@ -5,7 +5,7 @@ const TodoList = () => {
   const { todos, removeTodo, onToggle } = useTodos();
   return (
     <div>
-      <ul className="todo-list">
+      <ul className="m-2 p-2">
         {todos.map((todo) => (
           <TodoItem
             key={todo.id}
