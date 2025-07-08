@@ -2,7 +2,7 @@ import TodoItem from "./TodoItem";
 import { useTodos } from "../context/TodosContext.jsx";
 
 const TodoList = () => {
-  const { todos, removeTodo, onToggle } = useTodos();
+  const { todos } = useTodos();
   return (
     <div>
       <ul className="m-2 p-2">
@@ -12,8 +12,6 @@ const TodoList = () => {
             id={todo.id}
             value={todo.value}
             completed={todo.completed}
-            removeTodo={removeTodo}
-            onToggle={onToggle}
           />
         ))}
       </ul>
