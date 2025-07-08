@@ -1,9 +1,9 @@
 # 📝 React Todo Mission1
 
 React + JavaScript 기반의 Todo 애플리케이션입니다.  
-Context API로 전역 상태를 관리하고, Tailwind css로 스타일링합니다.
-localStorage를 통해 데이터를 영구히 저장합니다.
-컴포넌트 모듈화 / 커스텀 Hook 사용
+Context API로 전역 상태를 관리하고, Tailwind css로 스타일링합니다. <br />
+localStorage를 통해 데이터를 영구히 저장합니다.<br />
+컴포넌트 모듈화 / 커스텀 Hook 사용<br />
 
 ---
 
