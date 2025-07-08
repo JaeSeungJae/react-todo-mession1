@@ -1,14 +1,8 @@
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ todos, handleSubmit, removeTodo, onToggle }) => {
+const TodoList = ({ todos, removeTodo, onToggle }) => {
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" className="new-todo" autoFocus />
-        <button type="submit" className="add-todo">
-          할 일 추가
-        </button>
-      </form>
       <ul className="todo-list">
         {todos.map((todo) => (
           <TodoItem
