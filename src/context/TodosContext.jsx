@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
-export const useTodos = () => {
+export const TodosContext = createContext(); // Context 생성
+
+export const TodosProvider = ({ children }) => {
+  // Provider 정의
   const [todos, setTodos] = useState([
     { id: 1, value: "Sample Todo", completed: true },
     { id: 2, value: "Another Todo", completed: false },
@@ -37,7 +40,13 @@ export const useTodos = () => {
     );
   };
 
-  return { todos, handleSubmit, removeTodo, onToggle };
+  return (
+    <TodosContext.Provider
+      value={{ todos, addTodo, handleSubmit, removeTodo, onToggle }}
+    >
+      {children}
+    </TodosContext.Provider>
+  );
 };
 
-// custom hook 사용 안됨
+export const useTodos = () => useContext(TodosContext); // 커스텀 훅으로 Context 사용

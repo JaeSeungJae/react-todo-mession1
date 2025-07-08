@@ -3,14 +3,17 @@ import TodoItem from "./components/TodoItem";
 import TodoList from "./components/TodoList";
 import { useTodos } from "./hooks/useTodos";
 import TodoWriteForm from "./components/TodoWriteForm";
+import { TodosProvider } from "./context/TodosContext.jsx";
 
 function App() {
-  const { todos, handleSubmit, removeTodo, onToggle } = useTodos();
+  // const { todos, handleSubmit, removeTodo, onToggle } = useTodos();
 
   return (
     <>
-      <TodoWriteForm handleSubmit={handleSubmit} />
-      <TodoList todos={todos} removeTodo={removeTodo} onToggle={onToggle} />
+      <TodosProvider>
+        <TodoWriteForm />
+        <TodoList />
+      </TodosProvider>
     </>
   );
 }

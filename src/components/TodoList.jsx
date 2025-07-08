@@ -1,6 +1,8 @@
 import TodoItem from "./TodoItem";
+import { useTodos } from "../context/TodosContext.jsx";
 
-const TodoList = ({ todos, removeTodo, onToggle }) => {
+const TodoList = () => {
+  const { todos, removeTodo, onToggle } = useTodos();
   return (
     <div>
       <ul className="todo-list">

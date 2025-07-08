@@ -1,4 +1,8 @@
-const TodoWriteForm = ({ handleSubmit }) => {
+import { useTodos } from "../context/TodosContext.jsx";
+
+const TodoWriteForm = () => {
+  const { handleSubmit } = useTodos();
+
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" className="new-todo" autoFocus />
