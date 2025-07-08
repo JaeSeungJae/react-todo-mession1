@@ -3,7 +3,7 @@ import TodoWriteForm from "./components/TodoWriteForm";
 
 function App() {
   return (
-    <div className="max-w-xl mx-auto p-6">
+    <div className="max-w-xl mx-auto mt-10 p-6">
       <TodoWriteForm />
       <TodoList />
     </div>
