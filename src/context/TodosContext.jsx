@@ -35,7 +35,7 @@ export const TodosProvider = ({ children }) => {
       value: value,
       completed: false,
     };
-    setTodos((prevTodos) => [newTodo, ...prevTodos]);
+    setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
   const removeTodo = (id) => {
